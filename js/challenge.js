@@ -9,9 +9,10 @@ let flag=true;
 let seconds = 0;
 let myTime = setInterval(incrementSeconds, 1000);
 function incrementSeconds() {
-//  if (flag){
+if (flag){
     seconds += 1;
     counterBtn.innerText = seconds;
+  }
 }
 
 //counter stops on click
@@ -21,6 +22,7 @@ function incrementSeconds() {
   playBtn.addEventListener("click",pauseEvent)
 
  function pauseEvent(e){
+   flag=false;
       clearInterval(myTime);
       playBtn.innerHTML = "resume";
       playBtn.removeEventListener("click", pauseEvent);
@@ -34,6 +36,7 @@ function incrementSeconds() {
   }}
 
   function resumeEvent(e){
+    flag=true;
    myTime = setInterval(incrementSeconds, 1000);
       playBtn.innerHTML = "pause";
       playBtn.removeEventListener("click", resumeEvent)
@@ -61,8 +64,10 @@ function incrementSeconds() {
 
 //increment&decrement manually
 plusBtn.addEventListener("click", function(){
+  if(flag == true){
   counter += 1;
   counterBtn.innerHTML = parseInt(counterBtn.innerHTML) + 1
+}
 })
 
 minusBtn.addEventListener("click", function(){
