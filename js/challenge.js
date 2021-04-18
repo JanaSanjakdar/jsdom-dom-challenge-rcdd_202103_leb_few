@@ -63,9 +63,8 @@ minusBtn.addEventListener("click", function(){
   counterBtn.innerHTML = parseInt(counterBtn.innerHTML) - 1
 })
 
-heartBtn.addEventListener("click",heartEvent);
+heartBtn.addEventListener("click",heartEvent);  //addEventListener + ID only ID !!
 function heartEvent(e){
-
   let ul = document.getElementById('likes1')
   let li = document.createElement('li');
   li.appendChild(document.createTextNode(`${counterBtn.innerText }has been liked`));
@@ -73,39 +72,6 @@ function heartEvent(e){
 };
 
 
-//like button
-/*let counter=0;
-let like =document.queryselector(".likes")
-  if (getElementById(`li${counter}`)==null){
-    let li=document.createElement("li")
-    li.setAttribute("id",`li${counter}`)
-    li.innerHTML=`${counter} has been liked`
-    like.appendChild(li)
-  }
-/*else{
-  let li=document.getElementById(`li$(counter)`)
-  let splitted = parseInt(li.innerHTML.slit(":")[1])+1
-  li.innerHTML=`${counter} have this many likes:${splitted}`
-    likes.appendChild(li)
-  }
-
-})*/
-
-//heartBtn.addEventListener("click",heartEvent);
-//function heartEvent(e){
-//let like =document.getElementsByTagName("ul");
-
-/*  heartBtn.addEventListener("click",heartEvent);
-  function heartEvent(e){
-    let ul = document.getElementsById('likes')
-  let newLi = document.createElement('li');
-//  li.appendChild(document.createtextNode("counterBtn.innerText"))
-newLi. appendChild(document. createTextNode(`${counterBtn.innerText}has been liked`));
-      //newLi.innerText = `${counterBtn.innerText}has been liked`;
-
-    ul.appendChild(newLi);
-};
-}*/
 //add comments
 let comments=document.querySelector("input");
 let commentsDisplay= document.querySelector(".comments")
