@@ -65,9 +65,9 @@ minusBtn.addEventListener("click", function(){
 
 heartBtn.addEventListener("click",heartEvent);
 function heartEvent(e){
-  alert("sdsdsd")
-  var ul = document.getElementById('likes')
-  var li = document.createElement('li');
+  
+  let ul = document.getElementById('likes')
+  let li = document.createElement('li');
   li.appendChild(document.createTextNode(`${counterBtn.innerText }has been liked`));
   ul.appendChild(li);
 };
