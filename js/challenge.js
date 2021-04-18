@@ -50,8 +50,6 @@ if (flag){
   }
 
 
-});
-
 //increment&decrement manually
 plusBtn.addEventListener("click", function(){
   if(flag == true){
