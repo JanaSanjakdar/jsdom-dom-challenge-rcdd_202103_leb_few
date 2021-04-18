@@ -31,12 +31,7 @@ if (flag){
       playBtn.removeEventListener("click", pauseEvent);
       playBtn.addEventListener("click", resumeEvent);
 
- function myFunction() {
-    minusBtn.disabled = true;
-    plusBtn.disabled = true;
-    heartBtn.disabled = true;
-    document.getElementById("submit").disabled = true;
-  }}
+
 
   function resumeEvent(e){
     flag=true;
@@ -62,7 +57,13 @@ minusBtn.addEventListener("click", function(){
   counter -= 1;
   counterBtn.innerHTML = parseInt(counterBtn.innerHTML) - 1
 })
-
+heartBtn.addEventListener("click",heartEvent);
+function heartEvent(e){
+  var ul = document.getElementById('likes')
+  var li = document.createElement('li');
+  li.appendChild(document.createTextNode(`${counterBtn.innerText }has been liked`));
+  ul.appendChild(li);
+};
 //like button
 /*let counter=0;
 let like =document.queryselector(".likes")
