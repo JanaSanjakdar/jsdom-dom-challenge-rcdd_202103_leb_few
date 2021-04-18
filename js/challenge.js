@@ -31,7 +31,12 @@ if (flag){
       playBtn.removeEventListener("click", pauseEvent);
       playBtn.addEventListener("click", resumeEvent);
 
-
+ function myFunction() {
+    minusBtn.disabled = true;
+    plusBtn.disabled = true;
+    heartBtn.disabled = true;
+    document.getElementById("submit").disabled = true;
+  }}
 
   function resumeEvent(e){
     flag=true;
