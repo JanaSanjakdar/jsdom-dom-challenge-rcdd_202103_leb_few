@@ -23,13 +23,16 @@ if (flag){
 
  function pauseEvent(e){
    flag=false;
+   minusBtn.disabled = true;
+   plusBtn.disabled = true;
+   heartBtn.disabled = true;
       clearInterval(myTime);
       playBtn.innerHTML = "resume";
       playBtn.removeEventListener("click", pauseEvent);
       playBtn.addEventListener("click", resumeEvent);
 
  function myFunction() {
-  minusBtn.disabled = true;
+    minusBtn.disabled = true;
     plusBtn.disabled = true;
     heartBtn.disabled = true;
     document.getElementById("submit").disabled = true;
