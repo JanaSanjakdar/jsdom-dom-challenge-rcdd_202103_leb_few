@@ -63,6 +63,16 @@ minusBtn.addEventListener("click", function(){
   counterBtn.innerHTML = parseInt(counterBtn.innerHTML) - 1
 })
 
+heartBtn.addEventListener("click",heartEvent);
+function heartEvent(e){
+  alert("sdsdsd")
+  var ul = document.getElementById('likes')
+  var li = document.createElement('li');
+  li.appendChild(document.createTextNode(`${counterBtn.innerText }has been liked`));
+  ul.appendChild(li);
+};
+
+
 //like button
 /*let counter=0;
 let like =document.queryselector(".likes")
@@ -105,3 +115,5 @@ function addComment(e){
     newLi.innerText = this.value
     commentsDisplay.appendChild(newLi)
 };
+
+
