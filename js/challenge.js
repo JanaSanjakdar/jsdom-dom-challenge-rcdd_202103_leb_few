@@ -48,7 +48,7 @@ if (flag){
       playBtn.removeEventListener("click", resumeEvent)
       playBtn.addEventListener("click", pauseEvent);
   }
-  
+
 
 });
 
