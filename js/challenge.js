@@ -48,25 +48,9 @@ if (flag){
       playBtn.removeEventListener("click", resumeEvent)
       playBtn.addEventListener("click", pauseEvent);
   }
-  /*playBtn.addEventListener("click",function(){
-  if (flag){
-    playBtn.innerHTML = "resume"
-    flag = false
-  }
-  else{
-    playBtn.innerHTML = "pause"
-    flag = true
-  }
-  plusBtn.addEventListener("click", function(){
+  
 
- if(flag==false){
-  counter += 1;
-  counterBtn.innerHTML = parseInt(counterBtn.innerHTML) + 1
-  }
-
-})
-
-})*/
+});
 
 //increment&decrement manually
 plusBtn.addEventListener("click", function(){
