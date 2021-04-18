@@ -115,5 +115,3 @@ function addComment(e){
     newLi.innerText = this.value
     commentsDisplay.appendChild(newLi)
 };
-
-
