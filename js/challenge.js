@@ -40,6 +40,9 @@ if (flag){
 
   function resumeEvent(e){
     flag=true;
+    minusBtn.disabled = false;
+    plusBtn.disabled = false;
+    heartBtn.disabled =false;
    myTime = setInterval(incrementSeconds, 1000);
       playBtn.innerHTML = "pause";
       playBtn.removeEventListener("click", resumeEvent)
